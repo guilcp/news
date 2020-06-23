@@ -1,15 +1,16 @@
 const API_KEY = "644a24912e3948139317d5319bb1753e";
+const proxy = "https://cors-anywhere.herokuapp.com/";
 
 onload = () => {
     // let query = document.getElementById('txtPesquisa').value;
     let xhr = new XMLHttpRequest();
     xhr.onload = exibeNoticias;
-    xhr.open('GET', 'https://newsapi.org/v2/top-headlines?apiKey=' + API_KEY + '&language=pt');
+    xhr.open('GET', proxy + 'https://newsapi.org/v2/top-headlines?apiKey=' + API_KEY + '&language=pt');
     xhr.send();
 
     let xhr2 = new XMLHttpRequest();
     xhr2.onload = exibeFiltro;
-    xhr2.open('GET', 'https://newsapi.org/v2/sources?apiKey=' + API_KEY + '&language=pt');
+    xhr2.open('GET', proxy + 'https://newsapi.org/v2/sources?apiKey=' + API_KEY + '&language=pt');
     xhr2.send();
 
 }
@@ -18,7 +19,7 @@ $('#pesquisar').click(function(event) {
     if ($('#textoPesquisa').val() != "") {
         let xhr = new XMLHttpRequest();
         xhr.onload = exibeNoticias;
-        $url = 'https://newsapi.org/v2/top-headlines?apiKey=' + API_KEY + '&language=pt&q=' + $('#textoPesquisa').val();
+        $url = proxy + 'https://newsapi.org/v2/top-headlines?apiKey=' + API_KEY + '&language=pt&q=' + $('#textoPesquisa').val();
         xhr.open('GET', $url);
         xhr.send();
         document.getElementById('pageTitle').innerText = "Filtrando pela pesquisa: " + $('#textoPesquisa').val();
@@ -32,7 +33,7 @@ $('#pesquisar').click(function(event) {
 function filter(id, name) {
     let xhr = new XMLHttpRequest();
     xhr.onload = exibeNoticias;
-    xhr.open('GET', 'https://newsapi.org/v2/top-headlines?apiKey=' + API_KEY + '&language=pt&sources=' + id);
+    xhr.open('GET', proxy + 'https://newsapi.org/v2/top-headlines?apiKey=' + API_KEY + '&language=pt&sources=' + id);
     xhr.send();
     document.getElementById('pageTitle').innerText = "Filtrando pela fonte: " + name;
     window.scrollTo(0, 0);
