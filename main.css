@@ -1,0 +1,129 @@
+body {
+    background-color: #e8e8e8 !important;
+}
+
+
+/* Estilização header */
+
+header {
+    margin-bottom: 1%;
+}
+
+.logo {
+    margin-left: 35px;
+    font-family: 'abril_fatfaceregular';
+    color: white;
+    font-size: 80px;
+}
+
+.destaque {
+    background-color: #333a56;
+    border-radius: 10px;
+    padding: 5px 5px 5px 5px;
+}
+
+#navbarSupportedContent {
+    top: 25px;
+}
+
+.navbar-toggler {
+    top: -25px;
+}
+
+.nav-item a {
+    background-color: #52658f;
+    border-radius: 10px;
+    text-align: center;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: white !important;
+}
+
+.navbar-toggler {
+    background-color: #52658f !important;
+    border-radius: 10px !important;
+    margin-bottom: 5px;
+    color: white;
+    text-align: center;
+}
+
+form button {
+    background-color: #52658f !important;
+}
+
+
+/* Estilização main */
+
+#pageTitle {
+    color: white;
+    background-color: #52658f;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card-title {
+    color: #333a56;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #52658f;
+}
+
+.card-body,
+.row .no-gutters {
+    background-color: #f7f5e6;
+}
+
+#filtro {
+    background-color: #52658f;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+hr {
+    color: white;
+}
+
+h4,
+h5 {
+    color: white;
+}
+
+ul {
+    color: white;
+}
+
+
+/* Estilização footer */
+
+.footer {
+    margin-top: 20px;
+    color: white;
+}
+
+.footer_area {
+    padding: 10px;
+}
+
+#copyrigth {
+    text-align: center;
+}
+
+
+/* Estilização do redimensionamento das imagens */
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    height: 244px;
+}
